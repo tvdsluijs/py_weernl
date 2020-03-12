@@ -81,6 +81,8 @@ In de verwachtingen kan ook de weergave VAR worden gebruikt
 
 ## How do I get set up?
 
+* get an API key at  http://weerlive.nl/api/toegang/index.php
+
 * Install this script with:
     * pip3 py_weerNL --upgrade (or pip py_weerNL --upgrade )
 * ready to use it!
@@ -88,11 +90,11 @@ In de verwachtingen kan ook de weergave VAR worden gebruikt
 ## How do I use it
 
 ```
-from py_weernl import weerlive
+from py_weernl import weerLive
 
 place = "wolphaartsdijk"
-
-w = weerLive()
+my_api = [YOUR API]
+w = weerLive(api=my_api)
 
 data = w.getData(place)
 

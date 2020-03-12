@@ -1,23 +1,24 @@
-from setuptools import setup
+from setuptools import setup, find_packages
+
 
 def readme():
-    with open('README.rst') as f:
+    with open('README.md') as f:
         return f.read()
 
+
 setup(name='py_weernl',
-      version='0.1',
-      description='Python3 WeerLive data parser',
+      version='0.3.2',
+      description='Python WeerLive data parser',
       long_description=readme(),
-      url='https://bitbucket.org/tvdsluijs/py_weernl',
+      long_description_content_type="text/markdown",
+      url='https://github.com/tvdsluijs/py_weernl',
       author='Theo van der Sluijs',
       author_email='theo@vandersluijs.nl',
-      license='CC BY-NC-SA 4.0',
-      classifiers=[
-          'Programming Language :: Python :: 3',
-          'Programming Language :: Python :: 3.3',
-          'Programming Language :: Python :: 3.4',
-          'Programming Language :: Python :: 3.5',
-        ],
       keywords='weather Netherlands Live',
-      packages=['py_weernl'],
+      packages=find_packages(),
+      classifiers=[
+          "Programming Language :: Python :: 3",
+          "License :: OSI Approved :: MIT License",
+          "Operating System :: OS Independent",
+      ],
       zip_safe=False)
