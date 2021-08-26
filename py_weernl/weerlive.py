@@ -14,7 +14,7 @@ class weerLive:
         try:
             if api is None:
                 raise Exception("Sorry, no API key provided!")
-            self.url = f"https://weerlive.nl/api/json-10min.php?key={api}&locatie="
+            self.url = f"https://weerlive.nl/api/json-data-10min.php?key={api}&locatie="
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
